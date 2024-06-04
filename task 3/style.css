@@ -1,0 +1,18 @@
+body {
+    margin: 0; box-sizing: border-box; 
+}
+img {
+    width: 50vw; height: 70vh;
+}
+
+
+.img {
+    width: 50vw; height: 70vh;
+}
+.img-container {
+    stroke: black; justify-content: center;  padding: 10vh 25vw;
+}
+
+button {
+    width: 50vw; height: 10vh; border: 2px solid black; font-size: 40px; font-family: sans-serif; background: linear-gradient(to right, #00ff15, #0400ff); 
+}
