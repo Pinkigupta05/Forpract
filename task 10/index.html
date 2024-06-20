@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+        function interestAmount(P,R,N,T){
+            const A=  P*Math.pow( 1 + R/N,N*T)
+            const CI=Math.round( A-P)
+            console.log(`The compound interest after ${yearofinterest} is : ${CI}`);
+            return CI
+        }
+        const Principal =10000;
+        const rate=0.07;
+        const compoundinterest=4;
+        const yearofinterest=5;
+        
+        const newInterest=  interestAmount(Principal,rate,compoundinterest,yearofinterest)
+      
+    //  console.log(newInterest)
+
+
+    </script>
+</body>
+</html>
