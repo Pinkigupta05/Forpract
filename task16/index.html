@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        *{
+            
+            /* margin: 0%; */
+    /* padding: 0%; */
+    box-sizing: border-box;
+    font-family: "neue haas grotesk display";
+        }
+    .headd{
+        background-color: rgba(128, 128, 128, 0.222);
+        height: 70px;
+    }
+
+    
+        html,
+body {
+    height: 100%;
+    width: 100%;
+
+}
+nav {
+margin: 10px;
+
+width: 100%;
+/* background-color: red; */
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+
+}
+.blub{
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color:rgba(0, 0, 255, 0.21);
+    font-size: ;
+}
+.container {
+    margin-top: 30px;
+}
+#cards{
+    background-color: grey;
+    height: 20px;
+    width: 20px;
+}
+#cards {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    #cards h3 {
+      margin: 0 0 10px;
+    }
+    #cards p {
+      margin: 5px 0;
+    }
+    </style>
+</head>
+<header class="headd">
+    <nav>
+     <h3>Hi,Username</h3>
+    <button class="blub">Login</button>
+    </nav>
+</header>
+<main>
+    <div class="container">
+        <input type="text" placeholder="Search Student">
+        <button class="Search-box" id="Search-box">Search</button>
+<div id="cards"></div>
+    </div>
+
+
+</main>
+<body>
+    <script>
+        const student =
+        [
+  { Name: "Priyanka Gupta", Marks: "65%", Class: "5th", Address: "India" },
+  { Name: "Nidhi Gupta", Marks: "65%", Class: "5th", Address: "India" },
+  { Name: "Geeta Kaur", Marks: "99%", Class: "10th", Address: "America" },
+  { Name: "Shweta Babar", Marks: "65%", Class: "5th", Address: "India" },
+  { Name: "Jyoti Mishra", Marks: "65%", Class: "5th", Address: "Karnataka" },
+  { Name: "Kiran Anjikar", Marks: "99%", Class: "10th", Address:"Chennai" },
+  { Name: "Ritu Yadav", Marks: "65%", Class: "5th", Address: "India" },
+  { Name: "Geetanjali Jadhav", Marks: "65%", Class: "5th", Address: "India" },
+  { Name: "Smitha Singh", Marks: "99%", Class: "10th", Address: "India" },
+  { Name: "Anjali Sharma", Marks: "65%", Class: "5th", Address : "India" }
+];
+
+function renderstudents(studentArray){
+   const studentcontainer =  document.getElementById('cards').innerHTML = '';
+
+}
+ studentArray.map(student => {
+    document.createElement('div')
+    cards.className= 'cards'
+
+    const studentName= document.createElement('h3')
+    studentName.innertext =`Name:${student.Name}`
+    cards.appendChild(studentName)
+
+    const studentMarks= document.createElement('p')
+    studentMarks.innertext = student.Marks
+    cards.appendChild(studentMarks)
+
+    const studentClass= document.createElement('p')
+    studentClass.innertext = student.Class
+    cards.appendChild(studentClass)
+
+    const studentAddress = document.createElement('p')
+    studentAddress .innertext = student.Marks
+    cards.appendChild(studentAddress )
+
+    studentcontainer.append(cards)
+ })
+
+ function filterStudents() {
+            const searchTerm = document.getElementById('search-box').value.toLowerCase();
+            const filteredStudents = students.filter(student =>
+                student.Name.toLowerCase().includes(searchTerm)
+            );
+            renderStudents(filteredStudents);
+        }
+
+        document.getElementById('search-box').addEventListener('input', filterStudents);
+
+        // Initial render of all students
+        renderStudents(students);
+
+    </script>
+
+</body>
+
+</html>
